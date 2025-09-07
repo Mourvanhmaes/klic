@@ -6,8 +6,9 @@
 }
 :root{
     --botao: #0a2b55;
+    --contraste_botao: #123c73;
     --fundo: #f5f5f5;
-    --letra: #0a2b55;
+    --letra: #082041;
     --branco: white;
     --efeito-branco: #ddd;
     --constraste-letra: #1e63aa;
@@ -45,14 +46,18 @@ header nav a:hover{
     gap: 0.6rem;
     justify-content: center;
     align-items: center;
-    background: #0a2b55;
-    color: #fff;
+    background: var(--botao);
+    color: var(--branco);
     text-decoration: none;
     border: 3px solid black;
     border-radius: 6px;
     font-size: 14px;
     font-weight: bold;
     padding: 7px 18px;
+}
+.fale_conosco a:hover{
+    background-color: var(--contraste_botao);
+    border: 3px solid var(--constraste-letra);
 }
 .fale_conosco a img{
     width: 1.6  rem;
@@ -104,13 +109,13 @@ header nav a:hover{
     background-color: var(--efeito-branco);
     border: 2px solid var(--constraste-letra);
 }
-
 /* cursos */
 
 .cursos{
     text-align: center;
     padding-top: 4rem;
     color: var(--letra);
+    margin-bottom: 10rem;
 }
 .cursos p{
     font-size: x-large;
@@ -128,9 +133,16 @@ header nav a:hover{
 }
 .card{
     border: 3px solid var(--botao);
+    background-color: var(--fundo);
     border-radius: 1rem;
     width: 25rem;
     padding-bottom: 1rem;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+.card:hover {
+  transform: scale(1.1);
+  box-shadow: 0 8px 16px rgba(0,0,0,0.3);
+  z-index: 5;
 }
 .card img{
     width: 25rem;
@@ -158,4 +170,17 @@ header nav a:hover{
     height: 3rem;
     border-radius: 0.5rem;
     margin-top: 2rem;
+}
+.card:nth-child(n+5) {
+    display: none;
+}
+.setas{
+    width: 4rem;
+    cursor: pointer;
+}
+
+.mouse_nao_aqui{
+    filter: blur(1px); 
+    opacity: 0.4;     
+    transition: all 0.3s;
 }
