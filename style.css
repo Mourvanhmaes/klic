@@ -11,7 +11,9 @@
     --letra: #082041;
     --branco: white;
     --efeito-branco: #ddd;
+    --fundo-branco: #EFF3F6;
     --constraste-letra: #1e63aa;
+    --azul-transparente: #2b567a3c;
     --fundo_escuro: #091824;
 }
 header{
@@ -78,7 +80,7 @@ header nav a:hover{
     background: url("img/klicfundo.png") no-repeat center center/cover;
 }
 .aux_img{
-    background: rgba(7, 33, 68, 0.75);
+    background: rgba(0, 0, 0, 0.504);
     height: 95vh;
 }
 .txt_introducao{
@@ -132,7 +134,8 @@ header nav a:hover{
     text-align: center;
     padding-top: 4rem;
     color: var(--letra);
-    margin-bottom: 10rem;
+    background-color: var(--fundo-branco);
+    padding-bottom: 4rem;
 }
 .cursos p{
     font-size: x-large;
@@ -149,7 +152,7 @@ header nav a:hover{
     gap: 1rem;
 }
 .card{
-    border: 3px solid var(--botao);
+    border: 3px solid var(--fundo_escuro);
     background-color: var(--fundo);
     border-radius: 1rem;
     width: 25rem;
@@ -179,13 +182,13 @@ header nav a:hover{
     margin-left: 3rem;
 }
 .card button{
-    background-color: var(--botao);
+    background-color: var(--contraste_botao);
     border: none;
-    width: 24rem;
+    width: 20rem;
     color: var(--branco);
     font-size: x-large;
     height: 3rem;
-    border-radius: 0.5rem;
+    border-radius: 0.7rem;
     margin-top: 2rem;
 }
 .card:nth-child(n+5) {
@@ -200,4 +203,52 @@ header nav a:hover{
     filter: blur(1px);
     opacity: 0.4;
     transition: all 0.3s;
+}
+
+.info_horas{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: -5rem;
+    margin-bottom: -5rem;
+}
+.info_horas div{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.3rem;
+    margin: 0rem 2rem 0rem 2rem;
+}
+.info_horas div img{
+    width: 1.5rem;
+}
+/* ---------------servicos-------- */
+
+.servicos{
+    text-align: center;
+    padding-top: 4rem;
+    color: var(--letra);
+    margin-bottom: 10rem;
+    background-color: var(--branco);
+}
+.servicos p{
+    font-size: x-large;
+    padding-top: 1rem;
+}
+.serv_cards{
+    display: flex;
+}
+.serv_card{
+    border: 3px solid var(--fundo_escuro);
+    width: 25rem;
+}
+.serv_zap{
+    display: flex;
+    background-color: var(--botao);
+    background-color: var(--azul-transparente);
+    width: 20rem;
+    margin-left: 1.7rem;
+    padding: 0.8rem;
+    border-radius: 0.6rem;
+    gap: 0.5rem;
 }
